@@ -729,3 +729,591 @@ footer {
     }
     
 }
+
+// 主要內容
+main {
+    width: 100%;
+    height: 100%;
+
+    .title-word {
+        padding: 10px 0;
+        font-size: 48px;
+        font-weight: 900;
+        margin: 250px 500px 100px;
+        animation: title-word 1s 1s;
+        animation-fill-mode: backwards;
+
+        @media screen and (max-width: $tablet) {
+            margin: 250px 400px 100px;
+            font-size: 80px;
+            text-align: center;
+        }
+
+        @media screen and (max-width: $tablets) {
+            margin: 250px 300px 100px;
+            font-size: 70px;
+        }
+
+        @media screen and (max-width: $mobile) {
+            margin: 200px 100px 100px;
+            font-size: 60px;
+        }
+    }
+
+    @keyframes title-word {
+        0% {
+            transform: translateX(-1000px);
+        }
+
+        100% {
+            transform: translateX(0);
+        }
+    }
+
+    img {
+        width: 1080px;
+        display: block;
+        margin: 0 auto;
+        
+        @media screen and (max-width: $tablet) {
+            width: 100%;
+        }
+    }
+
+    h3 {
+        text-align: center;
+        padding: 20px 0;
+        font-weight: bold;
+        letter-spacing: 5px;
+        font-size: 40px;
+
+        @media screen and (max-width: $tablet) {
+            font-size: 60px;
+        }
+
+        @media screen and (max-width: $mobile) {
+            font-size: 50px;
+        }
+        
+    }
+
+    p {
+        width: 50%;
+        margin: 0 auto;
+        padding: 5px;
+        line-height: 2;
+        font-size: 20px;
+
+        @media screen and (max-width: $tablet) {
+            width: 70%;
+            font-size: 30px;
+        }
+
+        @media screen and (max-width: $mobile) {
+            font-size: 24px;
+        }
+    }
+}
+
+// 區塊內容介紹
+section {
+    width: 1280px;
+    height: 100%;
+    margin: 100px auto;
+
+    @media screen and (max-width: $tablet) {
+        width: 100%;
+    }
+
+    .boxing {
+        width: 100%;
+        margin: 0 auto;
+        
+
+        .box_magic {
+            display: grid;
+            grid-template-columns: 60% 40%;
+            grid-gap: 80px;
+            margin-bottom: 100px;
+
+            @media screen and (max-width: $tablet) {
+                grid-template-columns: none;
+                display: block;
+            }
+        }
+    
+        .image_box {
+            margin: 0 auto;
+            padding: 0;
+            display: block;
+            width: 100%;
+
+            
+        }
+        
+        img {
+            width: 450px;
+            height: 600px;
+            object-fit: cover;
+            margin: 0 100px;
+            
+            @media screen and (max-width: $tablet) {
+                margin: 0 290px;
+            }
+
+            @media screen and (max-width: $tablets) {
+                margin: 0 160px;
+            }
+
+            @media screen and (max-width: $mobile) {
+                margin: 0 auto;
+            }
+        }
+
+        .text_box {
+            margin: 0;
+            padding-right: 30%;
+            display: block;
+            width: 100%;
+
+            @media screen and (max-width: $tablet) {
+                margin: 0 auto;
+            }
+            
+        }
+
+        h4 {
+            text-align: center;
+            padding: 20px 10px 10px;
+            font-size: 32px;
+            font-weight: bold;
+
+            @media screen and (max-width: $tablet) {
+                font-size: 40px;
+                
+            }
+        }
+
+        p{
+            font-size: 20px;
+            padding: 10px 0;
+            line-height: 2.5;
+
+            @media screen and (max-width: $tablet) {
+                width: 100%;
+                font-size: 30px;
+            }
+
+            @media screen and (max-width: $mobile) {
+                font-size: 24px;
+                line-height: 2;
+            }
+        }
+
+
+        .box_magic:nth-child(odd) {
+            grid-template-areas: "pic text";
+            grid-template-columns: 60% 40%;
+
+            @media screen and (max-width: $tablet) {
+                grid-template-columns: 1fr;
+                margin: 0 auto;
+            }
+        }
+        .box_magic:nth-child(odd) .image_box {
+            grid-area: pic;
+        }
+        .box_magic:nth-child(odd) .text_box {
+            grid-area: text;
+            padding: 0 100px;
+
+            @media screen and (max-width: $mobile) {
+                padding: 0 30px;
+            }
+        }
+
+        .box_magic:nth-child(even) {
+            grid-template-areas: "text pic";
+            grid-template-columns: 40% 60%;
+            margin-left: 15%;
+
+            @media screen and (max-width: $tablet) {
+                grid-template-columns: 1fr;
+                margin: 0 auto;
+
+            }
+        }
+
+        .box_magic:nth-child(even) .image_box {
+            grid-area: pic;
+        }
+
+        .box_magic:nth-child(even) .text_box {
+            grid-area: text;
+            
+            @media screen and (max-width: $tablet) {
+                padding: 0 100px;
+            }
+
+            @media screen and (max-width: $mobile) {
+                padding: 0 30px;
+            }
+        }
+    }
+}
+
+// 統一樣式
+// 按鈕樣式
+.btn {
+    background: $color-black;
+    color: $color-white;
+    padding: 10px 30px;
+    display: block;
+    margin: 0 auto;
+    width: 80%;
+    font-size: 20px;
+    border-radius: 5px;
+    border: none;
+    margin-bottom: 20px;
+    transition: 0.5s;
+
+    &:hover {
+        border: 1px solid $color-black;
+        background: $color-white;
+        color: $color-black;
+    }
+
+    a {
+        text-decoration: none;
+        color: $color-white;
+
+        &:hover {
+            color: $color-black;
+        }
+    }
+}
+
+
+#arrow {
+    background-image: url(./img/arrow.png);
+    position: fixed;
+    z-index: 2;
+    width: 32px;
+    height: 32px;
+    right: 30px;
+    bottom: 30px;
+    cursor: pointer;
+}
+
+// 大標題
+.title-big {
+    text-align: center;
+    padding: 10px 0 30px;
+    font-size: 48px;
+    font-weight: 900;
+    margin-top: 50px;
+}
+
+.title-new-word {
+    @extend .title-big;
+    padding: 150px 0 50px;
+    font-size: 48px;
+    animation: title-new-word 1s 1s;
+    animation-fill-mode: backwards;
+
+    @media screen and (max-width: $tablet) {
+        font-size: 70px;
+    }
+
+    @media screen and (max-width: $tablet) {
+        font-size: 64px;
+    }
+
+    @media screen and (max-width: $mobile) {
+        font-size: 36px;
+    }
+
+    @keyframes title-new-word {
+        0% {
+            transform: translateX(-1000px);
+        }
+        100% {
+            transform: translateX(0);
+        }
+    }
+}
+
+// bootstrap 輪播(淡入淡出)
+#carouselExampleFade {
+    width: 1000px;
+    height: 800px;
+    margin: 0 auto;
+    // margin: 250px 260px;
+
+    @media screen and (max-width: $tablet) {
+        width: 100%;
+        height: 700px;
+    }
+
+    @media screen and (max-width: $mobile) {
+        height: 300px;
+    }
+
+    .carousel-control-prev, .carousel-control-next {
+        display: none;
+        color: #000 !important;
+    }
+}
+
+#delicious{
+    width: 1280px;
+    margin: 0 auto;
+
+    @media screen and (max-width: $tablet) {
+       width: 100%;
+    }
+
+
+    .card {
+       width: 100%;
+
+       .row {
+            width: 1280px;
+
+            .food {
+                width: 400px;
+                padding: 30px;
+                // animation: unfold 1s 1s;
+                // animation-fill-mode: backwards;
+
+                // @keyframes unfold {
+                    // 0% {transform: translateX(-1000px);opacity: 0;}
+                    // 50% {transform: translateX(-500px);opacity: 0.1;}
+                    // 75% {transform: translateX(-200px);opacity: 0.4;}
+                    // 100% {transform: translateX(0);opacity: 1;}
+                // }
+
+                @media screen and (max-width: $tablet) {
+                    padding-top: 220px;
+                }
+
+                @media screen and (max-width: $tablets) {
+                    padding-top: 0;
+                    width: 750px;
+                    opacity: 0.3;
+                }
+
+                @media screen and (max-width: $mobile) {
+                    padding: 0;
+                    width: 400px;
+                    opacity: 1;
+                }
+            }
+
+            .card-body {
+                position: relative;
+                width: 800px;
+                padding: 30px;
+
+                @media screen and (max-width: $tablet) {
+                    width: 75%;
+                    right: 40px;
+                }
+
+                @media screen and (max-width: $tablets) {
+                    width: 80%;
+                    right: 375px;
+                    top: 20px;
+                }
+
+                @media screen and (max-width: $mobile) {
+                    width: 30%;
+                    right: 0;
+                }
+
+                .card-title {
+                    font-size: 36px;
+                    font-weight: bold;
+                    margin-bottom: 20px;
+
+                    @media screen and (max-width: $mobile) {
+                        font-size: 46px;
+                        text-align: center;
+                    }
+                }
+
+                .card-text {
+                    font-size: 18px;
+                    line-height: 1.7;
+                    
+                    @media screen and (max-width: $tablet) {
+                        font-size: 24px;
+                    }
+
+                    @media screen and (max-width: $mobile) {
+                        font-size: 20px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// game頁面 
+// 圖片更換
+.games {
+    width: 100%;
+    height: 100vh;
+
+    .carousel-control-prev {
+        left: 0;
+
+        @media screen and (max-width: $tablets) {
+            left: -35px;
+        }
+
+        @media screen and (max-width: $mobile) {
+            left: 0;
+        }
+    }
+
+    h2{
+        color: #fff;
+        font-size: 72px;
+        font-weight: bold;
+        padding: 150px 100px;
+        text-shadow: 0 5px 7px #000;
+        // 動畫名稱 簡寫：動畫名稱 持續時間 緩動效果 延遲時間
+        animation: slider-h2 1s 1s;
+        // 填滿模式：
+        // backwards －開始顯示 0% 效果
+        // forwards －開始顯示 100% 效果
+        animation-fill-mode: backwards;
+
+        @keyframes slider-h2 {
+            0% {
+                transform: translateX(-1000px);
+            }
+    
+            100% {
+                transform: translateX(0);
+            }
+        }
+    }
+
+    #good_box {
+        position: relative;
+        bottom: 100px;
+    }
+
+    .draw_box {
+        position: relative;
+        display: block;
+        color: white;
+        width: inherit;
+        background-size: cover !important;
+        background-position: center !important;
+        height: 300px;
+        padding: 1em 2em;
+        border-radius: 10px;
+
+        .deck {
+            position: absolute;
+            display: block;
+            bottom: 50px;
+            width: 275px;
+            left: 40%;
+            margin: 0 auto;
+
+            @media screen and (max-width: $tablet) {
+                bottom: -200px;
+                width: 350px;
+                left: 36%;
+            }
+
+            @media screen and (max-width: $tablets) {
+                left: 30%;
+                bottom: -100px;
+            }
+
+            @media screen and (max-width: $mobile) {
+                width: 200px;
+                left: 24%;
+                bottom: 20px;
+            }
+        }
+
+        .draw {
+            position: absolute;
+            display: block;
+            top: -110px;
+            width: 220px;
+            left: 42%;
+            margin: 0 auto;
+            transition: 2s;
+            opacity: 0;
+
+            @media screen and (max-width: $tablet) {
+                width: 280px;
+                top: 70px;
+                left: 40%;
+            }
+
+            @media screen and (max-width: $tablets) {
+                left: 35%;
+                top: -25px;
+            }
+
+            @media screen and (max-width: $mobile) {
+                width: 150px;
+                left: 30%;
+                top: 50px;
+            }
+
+
+            &:hover {
+                transform: translateY(-250px);
+                opacity: 1;
+
+                @media screen and (max-width: $tablet) {
+                    transform: translateY(-350px);
+                }
+
+		        @media screen and (max-width: $mobile) {
+                    transform: translateY(-200px);
+                }
+
+            }
+        }
+    }
+
+   .carousel-item {
+       height: 100vh;
+   }
+
+    .carousel-item:nth-of-type(1) {
+        background: rgb(185, 235, 255) !important;
+        background-image: url(./img/game_bg.png)!important;
+        background-size: cover;
+        background-image: $filter;
+        // filter: blur(5px);
+        // opacity: 0.5;
+      }
+    
+    .carousel-item:nth-of-type(2) {
+        background: rgb(185, 235, 255) !important;
+        background-image: url(./img/game_bg.png)!important;
+        // filter: blur(5px);
+        // opacity: 0.5;
+      }
+    
+    .carousel-item:nth-of-type(3) {
+        background: rgb(185, 235, 255) !important;
+        background-image: url(./img/game_bg.png)!important;
+        // filter: blur(5px);
+        // opacity: 0.5;
+
+      }
+    
+}
+
