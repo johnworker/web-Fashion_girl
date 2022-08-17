@@ -440,12 +440,17 @@ nav {
 
                 a {
                     text-decoration: none;
+                    height: 100%;
 
                     img {
                         width: 500px;
                         height: 750px;
                         object-fit: cover;
                     }
+                }
+
+                h3 {
+                    text-align: center !important;
                 }
             }
         }
@@ -533,12 +538,14 @@ nav {
 
         h4 {
             text-align: center;
+            color: $color-white;
             padding: 10px;
         }
 
         p {
             line-height: 1.5;
             font-size: 14px;
+            color: $color-white;
             padding: 20px 20px 30px;
         }
     }
