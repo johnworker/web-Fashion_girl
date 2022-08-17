@@ -47,7 +47,7 @@ body {
         height: 40px;
     }
 
-    .mini-link-box {
+    .mini_link_box {
         position: relative;
         display: inline-block;
         padding: 0 60px;
@@ -57,12 +57,12 @@ body {
         right: 80px;
         top: 0px;
         // 滑入後 顯示 裡面的 子分頁元素
-        &:hover .mini-link{
+        &:hover .mini_link{
             // display: block; 
             transform: scale(1);
         }
 
-        .mini-link {
+        .mini_link {
             // display: none;
             // 第二種作法
             transform: scale(0);
@@ -74,7 +74,7 @@ body {
             left: 4px;
             background: $color-little_white;
 
-            .mini-logo {
+            .mini_logo {
                 font-weight: 900;
                 transition: 0.5s !important;
                 font-size: 22px !important;
@@ -110,7 +110,7 @@ nav {
         grid-template-columns: 100% 0;
     }
 
-    .link-mini-work {
+    .link_mini_work {
         position: relative;
         display: inline-block;
         padding: 0 60px;
@@ -120,13 +120,13 @@ nav {
         padding: 20px 50px;
         // height: 300px;
         // 滑入後 顯示 裡面的 子分頁元素
-        &:hover .sub-mini-link{
+        &:hover .sub_mini_link{
             // display: block; 
             transform: scale(1);
         }
     }
 
-    .sub-mini-link {
+    .sub_mini_link {
         // display: none;
         // 第二種作法
         transform: scale(0);
@@ -138,7 +138,7 @@ nav {
         background: $color-little_white;
         list-style-type: none;
     }
-    #link-work {
+    #link_work {
         position: relative;
         display: inline-block;
         padding: 0 60px;
@@ -147,13 +147,13 @@ nav {
         // height: 300px;
 
         // 滑入後 顯示 裡面的 子分頁元素
-        &:hover .sub-link{
+        &:hover .sub_link{
             // display: block; 
             transform: scale(1);
         }
     }
 
-    .sub-link {
+    .sub_link {
         // display: none;
         // 第二種作法
         transform: scale(0);
@@ -649,6 +649,10 @@ footer {
         font-size: 14px;
         padding: 10px 0;
         text-decoration: none;
+
+        img {
+            width: 100px;
+        }
     }
 
     #link {

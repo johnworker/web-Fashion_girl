@@ -33,7 +33,7 @@ body {
     height: 40px;
   }
 }
-#menu .mini-link-box {
+#menu .mini_link_box {
   position: relative;
   display: inline-block;
   padding: 0 60px;
@@ -43,10 +43,10 @@ body {
   right: 80px;
   top: 0px;
 }
-#menu .mini-link-box:hover .mini-link {
+#menu .mini_link_box:hover .mini_link {
   transform: scale(1);
 }
-#menu .mini-link-box .mini-link {
+#menu .mini_link_box .mini_link {
   transform: scale(0);
   transition: 1s;
   transform-origin: top;
@@ -56,14 +56,14 @@ body {
   left: 4px;
   background: rgba(236, 236, 236, 0.9);
 }
-#menu .mini-link-box .mini-link .mini-logo {
+#menu .mini_link_box .mini_link .mini_logo {
   font-weight: 900;
   transition: 0.5s !important;
   font-size: 22px !important;
   font-family: "Coda Caption", sans-serif;
   letter-spacing: 3px;
 }
-#menu .mini-link-box .mini-link a {
+#menu .mini_link_box .mini_link a {
   display: block !important;
   padding: 20px 50px !important;
   width: 180px !important;
@@ -90,7 +90,7 @@ nav {
     grid-template-columns: 100% 0;
   }
 }
-nav .link-mini-work {
+nav .link_mini_work {
   position: relative;
   display: inline-block;
   padding: 0 60px;
@@ -99,10 +99,10 @@ nav .link-mini-work {
   font-size: 20px;
   padding: 20px 50px;
 }
-nav .link-mini-work:hover .sub-mini-link {
+nav .link_mini_work:hover .sub_mini_link {
   transform: scale(1);
 }
-nav .sub-mini-link {
+nav .sub_mini_link {
   transform: scale(0);
   transition: 1s;
   transform-origin: top;
@@ -112,17 +112,17 @@ nav .sub-mini-link {
   background: rgba(236, 236, 236, 0.9);
   list-style-type: none;
 }
-nav #link-work {
+nav #link_work {
   position: relative;
   display: inline-block;
   padding: 0 60px;
   vertical-align: 10px;
   color: #252525;
 }
-nav #link-work:hover .sub-link {
+nav #link_work:hover .sub_link {
   transform: scale(1);
 }
-nav .sub-link {
+nav .sub_link {
   transform: scale(0);
   transition: 1s;
   transform-origin: top;
@@ -131,7 +131,7 @@ nav .sub-link {
   left: 4px;
   background: rgba(236, 236, 236, 0.9);
 }
-nav .sub-link a {
+nav .sub_link a {
   display: block !important;
   padding: 20px 60px !important;
   width: 180px !important;
@@ -798,6 +798,9 @@ footer .logo {
   font-size: 14px;
   padding: 10px 0;
   text-decoration: none;
+}
+footer .logo img {
+  width: 100px;
 }
 footer #link {
   padding: 1px 0;
