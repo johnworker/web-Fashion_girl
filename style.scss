@@ -2,7 +2,7 @@
 
 $color-gray: #999;
 $color-white: #e9e9e9;
-$color-black: #252525;
+$color-black: #000000;
 $color-little_white: rgba(236, 236, 236, 0.9);
 $text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.9);
 $gray-shadow: 2px 2px 3px rgba(90, 90, 90, 0.9);
@@ -24,7 +24,7 @@ $mobile: 767px;                                 //手機尺寸
 
 body {
     overflow-x: hidden;
-    background: $color-black;
+    background: $color-white;
 }
 
 // 導覽列
@@ -137,6 +137,7 @@ nav {
         right: 190px;
         background: $color-little_white;
         list-style-type: none;
+
     }
     #link_work {
         position: relative;
@@ -184,16 +185,18 @@ nav {
 
         a {
             color: $color-black;
+            background: $color-white;
             text-decoration: none;
             font-size: 16px;
             padding: 0 30px;
             transition: 0.5s;
             display: inline-block; //行內區塊元素 不會自己一行而且可以縮放
             vertical-align: 10px;
+            transition: 0.3s;
 
             &:hover {
-                color: $color-gray;
-                transform: scale(1.3);
+                color: $color-white;
+                background: $color-black;
             }
 
             img {
@@ -414,7 +417,7 @@ nav {
     .big_box {
         position: relative;
         height: 100vh;
-        margin-top: 20px;
+        margin: 20px auto 0;
         width: 100%;
         background-color: rgba(255, 255, 255, 0.8);
 
@@ -430,13 +433,16 @@ nav {
             height: 100vh;
         }
 
-        .mini_box {
+        .mini_max_box {
             display: grid;
-            grid-auto-columns: 1fr;
-            float: left;
+            grid-template-columns: repeat(3, 1fr);
+            grid-gap: 10px;
+
+        .mini_box {
+            margin: 0 auto;
 
             .mini_card {
-                margin: 0 65px;
+                margin: 0 5px;
 
                 a {
                     text-decoration: none;
@@ -446,27 +452,36 @@ nav {
                         width: 500px;
                         height: 750px;
                         object-fit: cover;
+                        transition: 0.4s;
+
+                        &:hover {
+                            transform: scale(1.05);
+                        }
                     }
                 }
 
                 h3 {
                     text-align: center;
+                    padding-top: 40px;
+                    font-weight: 400;
+                    font-family: Arial, Helvetica, sans-serif;
                 }
             }
         }
+    }
 
         p {
-            font-size: 20px;
+            font-size: 32px;
             width: 100%;
             text-align: center;
             padding: 50px 200px;
             color: $color-black;
-            font-weight: 500;
+            font-weight: 700;
             line-height: 40px;
 
             @media screen and (max-width: $tablet) {
                 padding: 0 200px 50px;
-                font-size: 26px;
+                font-size: 30px;
                 line-height: 60px;
             }
 
@@ -489,7 +504,7 @@ nav {
 
 // 最新消息
 #news {
-    width: 1280px;
+    width: 1920px;
     margin: 0 auto;
     padding: 20px 0;
 
@@ -501,7 +516,7 @@ nav {
     #news-content {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
-        grid-gap: 50px;
+        grid-gap: 0;
 
         @media screen and (max-width: $tablets) {
             grid-template-columns: 1fr;
@@ -515,6 +530,7 @@ nav {
 
         .news-card {
             box-shadow: $box-shadow;
+            margin: 0 auto;
 
             .recipe2 {
                 position: absolute;
@@ -531,14 +547,14 @@ nav {
         }
 
         img  {
-            width: 100%;
-            height: 300px;
+            width: 500px;
+            height: 800px;
             object-fit: cover;
         }
 
         h4 {
             text-align: center;
-            color: white;
+            color: $color-black;
             padding: 10px 0;
         }
 
@@ -597,7 +613,7 @@ form {
 }
 
 footer {
-    background: #666;
+    background: white;
     margin-top: 100px;
     padding: 50px;
     text-align: center;
@@ -617,7 +633,7 @@ footer {
         padding: 1px 0;
 
         a {
-            color: $color-white;
+            color: $color-black;
             text-decoration: none;
             font-size: 14px;
             padding: 0 5px;
@@ -918,6 +934,7 @@ section {
     font-size: 48px;
     font-weight: 900;
     margin-top: 50px;
+    color: $color-black;
 }
 
 .title-new-word {
