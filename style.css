@@ -1174,7 +1174,8 @@ section .boxing .box_magic:nth-child(even) .text_box {
     height: 300px;
   }
 }
-#carouselExampleFade .carousel-control-prev, #carouselExampleFade .carousel-control-next {
+#carouselExampleFade .carousel-control-prev,
+#carouselExampleFade .carousel-control-next {
   display: none;
   color: #000 !important;
 }
@@ -1414,4 +1415,20 @@ section .boxing .box_magic:nth-child(even) .text_box {
 .games .carousel-item:nth-of-type(3) {
   background: rgb(185, 235, 255) !important;
   background-image: url(./img/game_bg.png) !important;
+}
+
+.mini_shop_box {
+  display: grid;
+  grid-template-columns: 40% 60%;
+  grid-gap: 10px;
+}
+.mini_shop_box .mini_box {
+  margin: 0 auto;
+}
+.mini_shop_box .mini_box .mini_card {
+  width: 100%;
+}
+.mini_shop_box .mini_box .mini_card img {
+  width: 500px;
+  height: 750px;
 }/*# sourceMappingURL=style.css.map */
