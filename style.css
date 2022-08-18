@@ -157,7 +157,6 @@ nav #link a {
 }
 nav #link a:hover {
   color: #e9e9e9;
-  background: #000000;
 }
 nav #link a img {
   width: 80px;
@@ -674,10 +673,19 @@ nav #social a img {
   -o-object-fit: cover;
      object-fit: cover;
 }
-#news #news-content h4 {
+#news #news-content a:hover {
+  text-decoration: none;
+}
+#news #news-content a h4 {
   text-align: center;
   color: #000000;
   padding: 10px 0;
+  font-weight: 600;
+  transition: 0.5s;
+  background: white;
+}
+#news #news-content a h4:hover {
+  background: rgb(200, 200, 200);
 }
 
 #list {
