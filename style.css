@@ -1419,8 +1419,9 @@ section .boxing .box_magic:nth-child(even) .text_box {
 
 .mini_shop_box {
   display: grid;
-  grid-template-columns: 40% 60%;
+  grid-template-columns: 60% 40%;
   grid-gap: 10px;
+  height: 100%;
 }
 .mini_shop_box .mini_box {
   margin: 0 auto;
@@ -1429,6 +1430,68 @@ section .boxing .box_magic:nth-child(even) .text_box {
   width: 100%;
 }
 .mini_shop_box .mini_box .mini_card img {
-  width: 500px;
-  height: 750px;
+  width: 250px;
+  height: 375px;
+}
+.mini_shop_box button {
+  width: 80%;
+  text-align: center;
+}
+.mini_shop_box .row button {
+  width: 20%;
+}
+
+#tabs {
+  overflow: hidden;
+  margin: 0 auto;
+  width: 80%;
+}
+#tabs .tab-title img {
+  width: 250px;
+}
+
+#tabs > div {
+  display: flex;
+}
+
+#tabs > div > div {
+  flex: 0.5;
+}
+
+#tabs ul {
+  display: flex;
+}
+
+.new_photo {
+  margin-right: 25px;
+}
+.new_photo img {
+  width: 250px;
+}
+
+.new_detail {
+  padding: 50px 0;
+}
+.new_detail h3 {
+  font-size: 2rem;
+}
+.new_detail h2 {
+  font-size: 0.95rem;
+  font-weight: normal;
+  margin: 15px 0;
+}
+.new_detail h4 {
+  font-size: 2.2rem;
+  padding: 10px;
+  margin-bottom: 20px;
+  width: 12rem;
+  background-color: #f1e322;
+  box-shadow: 5px 5px 0 #f00;
+}
+.new_detail small {
+  font-size: 0.8rem;
+}
+.new_detail p {
+  font-size: 1rem;
+  padding: 20px 0;
 }/*# sourceMappingURL=style.css.map */

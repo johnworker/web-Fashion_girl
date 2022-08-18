@@ -1300,8 +1300,9 @@ section {
 // 購物車系統
 .mini_shop_box {
     display: grid;
-    grid-template-columns: 40% 60%;
+    grid-template-columns: 60% 40%;
     grid-gap: 10px;
+    height: 100%;
 
     .mini_box {
         margin: 0 auto;
@@ -1310,9 +1311,78 @@ section {
             width: 100%;
 
             img {
-                width: 500px;
-                height: 750px;
+                width: 250px;
+                height: 375px;
             }
         }
     }
+
+    button {
+        width: 80%;
+        text-align: center;
+    }
+
+    .row {
+
+        button {
+            width: 20%;
+        }
+    }
+}
+
+// 頁籤相簿
+#tabs{
+    overflow: hidden;
+    margin: 0 auto;
+    width: 80%;
+
+    .tab-title {
+
+        img {
+            width: 250px;
+        }
+    }
+  }
+  #tabs>div{
+    display: flex;
+  }
+  #tabs>div>div{
+    flex: .5
+  }
+  #tabs ul{
+    display: flex;
+  }
+  .new_photo{
+    margin-right: 25px;
+
+    img {
+        width: 250px;
+    }
+  }
+  .new_detail{
+    padding: 50px 0;
+ 
+   h3{
+    font-size: 2rem;
+  }
+   h2{
+    font-size: .95rem;
+    font-weight: normal;
+    margin: 15px 0;
+  }
+   h4{
+    font-size: 2.2rem;
+    padding: 10px;
+    margin-bottom: 20px;
+    width: 12rem;
+    background-color: #f1e322;
+    box-shadow: 5px 5px 0 #f00;
+  }
+   small{
+    font-size: .8rem;
+  }
+   p{
+    font-size: 1rem;
+    padding: 20px 0;
+  }
 }

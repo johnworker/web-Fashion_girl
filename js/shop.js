@@ -38,14 +38,6 @@ var inventory=[
 			id:7,
 			details:'red camaera',
 			price:76.50
-		},{
-			id:8,
-			details:'yellow camaera',
-			price:76.50
-		},{
-			id:9,
-			details:'purple camaera',
-			price:76.50
 		}]
 	}
 ];
@@ -121,4 +113,9 @@ var vm = new Vue({
 	}
 });
 Vue.config.devtools = true;
+
+   /* 頁籤相簿 */
+   $( function() {
+	$( "#tabs" ).tabs();
+  } );
 	
