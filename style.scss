@@ -139,6 +139,38 @@ nav {
         list-style-type: none;
 
     }
+
+    // 第二組
+    .link_mini_work_two {
+        position: relative;
+        display: inline-block;
+        padding: 0 60px;
+        vertical-align: 10px;
+        color: $color-black;
+        font-size: 20px;
+        padding: 20px 50px;
+        // height: 300px;
+        // 滑入後 顯示 裡面的 子分頁元素
+        &:hover .sub_mini_link_two{
+            // display: block; 
+            transform: scale(1);
+        }
+    }
+
+    .sub_mini_link_two {
+        // display: none;
+        // 第二種作法
+        transform: scale(0);
+        transition: 1s;
+        transform-origin: top;
+        position: absolute;
+        top: 0;
+        right: 140px;
+        background: $color-little_white;
+        list-style-type: none;
+
+    }
+
     #link_work {
         position: relative;
         display: inline-block;
@@ -148,7 +180,7 @@ nav {
         // height: 300px;
 
         // 滑入後 顯示 裡面的 子分頁元素
-        &:hover .sub_link{
+        &:hover .sub_link {
             // display: block; 
             transform: scale(1);
         }
@@ -173,6 +205,43 @@ nav {
         }
     }
 
+    // 第二組
+    #link_work_two {
+        position: relative;
+        display: inline-block;
+        padding: 0 60px;
+        vertical-align: 10px;
+        color: $color-black;
+        // height: 300px;
+
+        // 滑入後 顯示 裡面的 子分頁元素
+        &:hover .sub_link_two{
+            // display: block; 
+            transform: scale(1);
+        }
+    }
+
+    .sub_link_two {
+        // display: none;
+        // 第二種作法
+        transform: scale(0);
+        transition: 1s;
+        transform-origin: top;
+        position: absolute;
+        top: 56px;
+        left: 4px;
+        background: $color-little_white;
+        
+
+        a {
+            display: block !important;
+            padding: 20px 60px !important;
+            width: 180px !important;
+        }
+    }
+
+
+
     #link {
 
         @media screen and (max-width: $tablet) {
@@ -195,7 +264,7 @@ nav {
             transition: 0.3s;
 
             &:hover {
-                color: $color-white;
+                color: $color-gray;
             }
 
             img {
@@ -763,6 +832,14 @@ section {
         width: 100%;
     }
 
+    .carousel-inner {
+        margin: 0 auto;
+
+        img {
+            margin: 0 auto;
+        }
+    }
+
     .boxing {
         width: 100%;
         margin: 0 auto;
@@ -785,7 +862,6 @@ section {
             padding: 0;
             display: block;
             width: 100%;
-
             
         }
         
@@ -793,7 +869,7 @@ section {
             width: 450px;
             height: 600px;
             object-fit: cover;
-            margin: 0 100px;
+            margin: 0 auto !important;
             
             @media screen and (max-width: $tablet) {
                 margin: 0 290px;
