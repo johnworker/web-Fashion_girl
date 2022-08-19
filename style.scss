@@ -474,7 +474,7 @@ nav {
     .big_box {
         position: relative;
         height: 100vh;
-        margin: 20px auto 0;
+        margin: 110px auto 0;
         width: 100%;
         background-color: rgba(255, 255, 255, 0.8);
 
@@ -531,7 +531,7 @@ nav {
             font-size: 32px;
             width: 100%;
             text-align: center;
-            padding: 50px 200px;
+            padding: 20px 200px;
             color: $color-black;
             font-weight: 700;
             line-height: 40px;
@@ -1299,14 +1299,26 @@ section {
 }
 
 // 購物車系統
+.shopper {
+    height: 150vh;
+
+    .big_box {
+        height: 150vh !important;
+    }
+}
+
 .mini_shop_box {
     display: grid;
-    grid-template-columns: 60% 40%;
+    grid-template-columns: 45% 55%;
     grid-gap: 10px;
     height: 100%;
 
     .mini_box {
         margin: 0 auto;
+
+        .main {
+            margin: 0 auto;
+        }
 
         .mini_card {
             width: 100%;
@@ -1324,9 +1336,20 @@ section {
     }
 
     .row {
+        margin-right: 0;
+        margin-left: 0;
+
+        .col-sm-1 {
+            max-width: 28%;
+            flex: 0 0 28%;
+        }
 
         button {
-            width: 20%;
+            width: 22%;
+        }
+
+        p {
+            padding: 20px 0 !important;
         }
     }
 }
@@ -1350,8 +1373,10 @@ section {
   }
   #tabs>div{
     display: flex;
+    flex-direction: column;
   }
   #tabs>div>div{
+    margin: 0 auto;
     flex: .5
   }
   #tabs ul{
@@ -1361,10 +1386,12 @@ section {
     list-style-type: none;
   }
   .new_photo{
-    margin-right: 25px;
 
     img {
-        width: 350px;
+        width: 500px;
+        height: 750px;
+        object-fit: cover;
+        margin: 0 auto;
     }
   }
   .new_detail{
@@ -1372,6 +1399,7 @@ section {
  
    h3{
     font-size: 2rem;
+    text-align: center;
   }
    h2{
     font-size: .95rem;

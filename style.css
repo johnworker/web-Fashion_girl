@@ -589,7 +589,7 @@ nav #social a img {
 #about .big_box {
   position: relative;
   height: 100vh;
-  margin: 20px auto 0;
+  margin: 110px auto 0;
   width: 100%;
   background-color: rgba(255, 255, 255, 0.8);
 }
@@ -643,7 +643,7 @@ nav #social a img {
   font-size: 32px;
   width: 100%;
   text-align: center;
-  padding: 50px 200px;
+  padding: 20px 200px;
   color: #000000;
   font-weight: 700;
   line-height: 40px;
@@ -1418,13 +1418,23 @@ section .boxing .box_magic:nth-child(even) .text_box {
   background-image: url(./img/game_bg.png) !important;
 }
 
+.shopper {
+  height: 150vh;
+}
+.shopper .big_box {
+  height: 150vh !important;
+}
+
 .mini_shop_box {
   display: grid;
-  grid-template-columns: 60% 40%;
+  grid-template-columns: 45% 55%;
   grid-gap: 10px;
   height: 100%;
 }
 .mini_shop_box .mini_box {
+  margin: 0 auto;
+}
+.mini_shop_box .mini_box .main {
   margin: 0 auto;
 }
 .mini_shop_box .mini_box .mini_card {
@@ -1438,8 +1448,19 @@ section .boxing .box_magic:nth-child(even) .text_box {
   width: 80%;
   text-align: center;
 }
+.mini_shop_box .row {
+  margin-right: 0;
+  margin-left: 0;
+}
+.mini_shop_box .row .col-sm-1 {
+  max-width: 28%;
+  flex: 0 0 28%;
+}
 .mini_shop_box .row button {
-  width: 20%;
+  width: 22%;
+}
+.mini_shop_box .row p {
+  padding: 20px 0 !important;
 }
 
 #tabs {
@@ -1460,9 +1481,11 @@ section .boxing .box_magic:nth-child(even) .text_box {
 
 #tabs > div {
   display: flex;
+  flex-direction: column;
 }
 
 #tabs > div > div {
+  margin: 0 auto;
   flex: 0.5;
 }
 
@@ -1473,11 +1496,12 @@ section .boxing .box_magic:nth-child(even) .text_box {
   list-style-type: none;
 }
 
-.new_photo {
-  margin-right: 25px;
-}
 .new_photo img {
-  width: 350px;
+  width: 500px;
+  height: 750px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  margin: 0 auto;
 }
 
 .new_detail {
@@ -1485,6 +1509,7 @@ section .boxing .box_magic:nth-child(even) .text_box {
 }
 .new_detail h3 {
   font-size: 2rem;
+  text-align: center;
 }
 .new_detail h2 {
   font-size: 0.95rem;
