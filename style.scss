@@ -680,6 +680,7 @@ footer {
     margin-top: 100px;
     padding: 50px;
     text-align: center;
+    display: block;
 
     .logo {
         color: $color-white;
@@ -1337,9 +1338,13 @@ section {
     width: 80%;
 
     .tab-title {
+        float: left;
 
         img {
-            width: 250px;
+            width: 100px;
+            height: 150px;
+            object-fit: cover;
+            margin: 5px 0;
         }
     }
   }
@@ -1351,12 +1356,15 @@ section {
   }
   #tabs ul{
     display: flex;
+    flex-direction: column;
+    margin: 0 20px;
+    list-style-type: none;
   }
   .new_photo{
     margin-right: 25px;
 
     img {
-        width: 250px;
+        width: 350px;
     }
   }
   .new_detail{
@@ -1385,4 +1393,18 @@ section {
     font-size: 1rem;
     padding: 20px 0;
   }
+}
+
+// jquery ui
+.ui-widget-content {
+    background: (0, 0, 0, 0);
+    border: none !important;
+}
+
+.ui-tabs .ui-tabs-nav li {
+    background: white;
+
+    &:hover {
+        background: gray;
+    }
 }
