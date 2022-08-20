@@ -1,25 +1,25 @@
 var inventory=[
 	{
-		name:'skirt',
+		name:'bag',
 		options:[{
 			id:1,
-			details:'knitted skirt(white)',
+			details:'leather bag(brown)',
 			price:350
 		},{
 			id:2,
-			details:'suspender skirt(black)',
+			details:'christian dior(white)',
 			price:350
 		},{
 			id:3,
-			details:'silk dress(white)',
+			details:'flat iron(black)',
 			price:350
 		},{
 			id:4,
-			details:'knitted skirt(pink)',
+			details:'waterproof bag(green)',
 			price:350
 		},{
 			id:5,
-			details:'silk dress(yellow)',
+			details:'louis vuitton(pattern)',
 			price:350
 		}]
 	}
