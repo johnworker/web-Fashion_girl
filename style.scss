@@ -388,33 +388,6 @@ nav {
                 }
             }
 
-            h3 {
-                font-size: 24px;
-                line-height: 1.5;
-                text-shadow: $gray-shadow;
-                color: $color-black;
-
-                @media screen and (max-width: $tablet) {
-                    width: 80%;
-                    margin: 0 auto;
-                    line-height: 1.5;
-                    font-size: 30px;
-                }
-
-                @media screen and (max-width: $tablets) {
-                    width: 80%;
-                    margin: 0 auto;
-                    line-height: 1.3;
-                    font-size: 24px;
-                }
-
-                @media screen and (max-width: $mobile) {
-                    width: 50%;
-                    font-size: 20px;
-                    margin: 0 auto;
-                    line-height: 1.5;
-                }
-            }
         }
     }
 
@@ -715,237 +688,110 @@ footer {
     }
 }
 
-// 主要內容
-main {
+// 最新商品
+// 關於
+#new_products {
+    background-image: url(./img/about_bg.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    margin: 0 auto;
     width: 100%;
-    height: 100%;
 
-    .title-word {
-        padding: 10px 0;
-        font-size: 48px;
-        font-weight: 900;
-        margin: 250px 500px 100px;
-        animation: title-word 1s 1s;
-        animation-fill-mode: backwards;
+    .big_box {
+        position: relative;
+        height: 100vh;
+        margin: 110px auto 0;
+        width: 100%;
+        background-color: rgba(255, 255, 255, 0.8);
 
         @media screen and (max-width: $tablet) {
-            margin: 250px 400px 100px;
-            font-size: 80px;
-            text-align: center;
+            height: 90vh;
         }
 
         @media screen and (max-width: $tablets) {
-            margin: 250px 300px 100px;
-            font-size: 70px;
+            height: 100vh;
         }
 
         @media screen and (max-width: $mobile) {
-            margin: 200px 100px 100px;
-            font-size: 60px;
-        }
-    }
-
-    @keyframes title-word {
-        0% {
-            transform: translateX(-1000px);
+            height: 100vh;
         }
 
-        100% {
-            transform: translateX(0);
-        }
-    }
-
-    img {
-        width: 1080px;
-        display: block;
-        margin: 0 auto;
-
-        @media screen and (max-width: $tablet) {
-            width: 100%;
-        }
-    }
-
-    h3 {
-        text-align: center;
-        padding: 20px 0;
-        font-weight: bold;
-        letter-spacing: 5px;
-        font-size: 40px;
-
-        @media screen and (max-width: $tablet) {
-            font-size: 60px;
-        }
-
-        @media screen and (max-width: $mobile) {
-            font-size: 50px;
-        }
-    }
-
-    p {
-        width: 50%;
-        margin: 0 auto;
-        padding: 5px;
-        line-height: 2;
-        font-size: 20px;
-
-        @media screen and (max-width: $tablet) {
-            width: 70%;
-            font-size: 30px;
-        }
-
-        @media screen and (max-width: $mobile) {
-            font-size: 24px;
-        }
-    }
-}
-
-// 區塊內容介紹
-section {
-    width: 1280px;
-    height: 100%;
-    margin: 100px auto;
-
-    @media screen and (max-width: $tablet) {
-        width: 100%;
-    }
-
-    .carousel-inner {
-        margin: 0 auto;
-
-        img {
-            margin: 0 auto;
-        }
-    }
-
-    .boxing {
-        width: 100%;
-        margin: 0 auto;
-
-        .box_magic {
+        .mini_max_box {
             display: grid;
-            grid-template-columns: 60% 40%;
-            grid-gap: 80px;
-            margin-bottom: 100px;
+            grid-template-columns: repeat(3, 1fr);
+            grid-gap: 10px;
 
-            @media screen and (max-width: $tablet) {
-                grid-template-columns: none;
-                display: block;
-            }
-        }
-
-        .image_box {
-            margin: 0 auto;
-            padding: 0;
-            display: block;
-            width: 100%;
-        }
-
-        img {
-            width: 450px;
-            height: 600px;
-            object-fit: cover;
-            margin: 0 auto !important;
-
-            @media screen and (max-width: $tablet) {
-                margin: 0 290px;
-            }
-
-            @media screen and (max-width: $tablets) {
-                margin: 0 160px;
-            }
-
-            @media screen and (max-width: $mobile) {
+            .mini_box {
                 margin: 0 auto;
-            }
-        }
 
-        .text_box {
-            margin: 0;
-            padding-right: 30%;
-            display: block;
-            width: 100%;
+                .mini_card {
+                    margin: 0 5px;
 
-            @media screen and (max-width: $tablet) {
-                margin: 0 auto;
-            }
-        }
+                    a {
+                        text-decoration: none;
+                        height: 100%;
 
-        h4 {
-            text-align: center;
-            padding: 20px 10px 10px;
-            font-size: 32px;
-            font-weight: bold;
+                        img {
+                            width: 500px;
+                            height: 750px;
+                            object-fit: cover;
+                            transition: 0.4s;
 
-            @media screen and (max-width: $tablet) {
-                font-size: 40px;
+                            &:hover {
+                                transform: scale(1.05);
+                            }
+                        }
+                    }
+
+                    h3 {
+                        text-align: center;
+                        padding: 40px 40px 0;
+                        font-weight: 400;
+                        font-family: sans-serif, Helvetica, Arial;
+                    }
+
+                    p {
+                        text-align: center;
+                        font-weight: 600;
+                        font-size: 24px;
+                        font-family: sans-serif, Helvetica, Arial;
+                    }
+                }
             }
         }
 
         p {
-            font-size: 20px;
-            padding: 10px 0;
-            line-height: 2.5;
+            font-size: 32px;
+            width: 100%;
+            text-align: center;
+            padding: 20px 200px;
+            color: $color-black;
+            font-weight: 700;
+            line-height: 40px;
 
             @media screen and (max-width: $tablet) {
-                width: 100%;
+                padding: 0 200px 50px;
                 font-size: 30px;
+                line-height: 60px;
+            }
+
+            @media screen and (max-width: $tablets) {
+                padding: 10px 100px;
+                font-size: 20px;
+                text-align: center;
             }
 
             @media screen and (max-width: $mobile) {
-                font-size: 24px;
-                line-height: 2;
-            }
-        }
-
-        .box_magic:nth-child(odd) {
-            grid-template-areas: "pic text";
-            grid-template-columns: 60% 40%;
-
-            @media screen and (max-width: $tablet) {
-                grid-template-columns: 1fr;
+                width: 70%;
+                padding: 5px 0;
+                font-size: 16px;
+                line-height: 30px;
                 margin: 0 auto;
-            }
-        }
-        .box_magic:nth-child(odd) .image_box {
-            grid-area: pic;
-        }
-        .box_magic:nth-child(odd) .text_box {
-            grid-area: text;
-            padding: 0 100px;
-
-            @media screen and (max-width: $mobile) {
-                padding: 0 30px;
-            }
-        }
-
-        .box_magic:nth-child(even) {
-            grid-template-areas: "text pic";
-            grid-template-columns: 40% 60%;
-            margin-left: 15%;
-
-            @media screen and (max-width: $tablet) {
-                grid-template-columns: 1fr;
-                margin: 0 auto;
-            }
-        }
-
-        .box_magic:nth-child(even) .image_box {
-            grid-area: pic;
-        }
-
-        .box_magic:nth-child(even) .text_box {
-            grid-area: text;
-
-            @media screen and (max-width: $tablet) {
-                padding: 0 100px;
-            }
-
-            @media screen and (max-width: $mobile) {
-                padding: 0 30px;
             }
         }
     }
 }
+
 
 // 統一樣式
 // 按鈕樣式
@@ -1436,3 +1282,218 @@ section {
         background: gray;
     }
 }
+
+// 測試購物車
+    
+  .cart_btn {
+    display: flex;
+    justify-content: flex-end;
+    margin: 150px 0 10px;
+
+    #cart {
+        position: relative;
+        font-size: 2rem;
+        cursor: pointer;
+        margin: 1em 4em 0 0;
+      }
+
+      .cart_quantity {
+        color: white;
+        background-color: red;
+        padding: .2em .3em;
+        position: absolute;
+        margin: .8em 7.5em 0 0;
+        right: 0;
+        border: solid 2px red;
+        border-radius: 15px;
+        font-weight: bolder;
+      }    
+  }
+  
+ 
+  .items_container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    margin-top: 1em;
+    
+    .product_name {
+        font-size: 24px;
+        font-weight: 600;
+        font-family: serif;
+        color: #000;
+    }
+  }
+  
+  .card {
+  /*   width: 15rem; */
+    margin: 1em;
+    position: relative;
+    overflow: hidden; 
+    text-align: center
+  }
+  
+  .card:hover .add_to_cart {
+    transform: translateX(0);
+  }
+  
+  .product_image {
+    margin-bottom: 1em;
+    width: 350px;
+    height: 500px;
+  }
+  
+  .add_to_cart {
+    background-color: black;
+    color: white;
+    position: absolute;
+    right: 0;
+    top: 65%;
+    padding: .5em 1em; 
+    transform: translateX(300px);
+    transition: .5s ease;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    font-weight: bolder;
+    font-size: 1.2rem
+  }
+  
+  .product_price {
+    padding-top: 1em;
+    font-weight: bold;
+    font-size: 1.5rem;
+  }
+  
+  .cart_modal_overlay {
+    position: fixed;
+    width: 100vw;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .5);
+    overflow-y: scroll;
+    z-index: 2;
+    transform: translateX(-200%);
+    transition: .5s ease-out;
+    
+  }
+  
+  .cart_modal {
+    height: 100vh;
+    width: 50%;
+    background-color: rgb(50,50,50);
+    float: right;
+    overflow: scroll;
+    overflow-x: hidden;
+  }
+  
+  #close_btn {
+    font-size: 1.5rem;
+    float: right;
+    margin: .5em 2em 0 0;
+    color: white;
+    cursor: pointer;
+  }
+  
+  .cart_is_empty {
+    color: white;
+    text-align: center;
+    font-size: 1.5rem;
+    margin-bottom: 1em;
+    display: none;
+    
+  }
+  
+  .total {
+    text-align: center;
+    margin: 2em 0 10em 0;
+    padding: 0 0 20px;
+  /*   display: none; */
+  }
+  
+  .cart_total {
+    color: white;
+  }
+  
+  .total_price {
+    color: white;
+    font-size: 2rem;
+    display: block;
+  }
+  
+  .purchase_btn {
+    font-size: 1rem;
+    font-weight: bolder;
+    background-color: green;
+    color: white;
+    padding: 1em 2em;
+    border-radius: 10px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    margin: 2em 0 1em 0;
+  }
+  
+  .product_rows {
+    margin-top: 3em;
+    width: 95%;
+    margin-left: auto;
+    margin-right: auto;
+    
+  }
+  
+  .product-row {
+    display: flex;
+    align-items: center;
+  }
+  
+  .cart-image {
+    width: 10rem;
+    margin: 1em;
+  }
+  
+  .cart-price {
+    color: white;
+    font-size: 1.5rem;
+    font-weight: bolder;
+  }
+  
+  .product_quantity {
+    width: 4rem;
+    font-size: 2rem;
+    margin-left: 3rem;
+  }
+  
+  .remove_btn {
+    padding: 1em 2em;
+    background-color: red;
+    color: white;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    margin-left: 3rem;
+    font-weight: bolder;
+    font-size: 1rem;
+  }
+  
+  .remove_btn:active {
+    transform: translateY(5px);
+  }
+  
+  @media (max-width: 1000px){
+    .cart-modal {
+      width: 100vw;
+    } 
+    
+    .product-row {
+      flex-direction: column;
+      text-align: center;
+      margin-bottom: 2em;
+    }
+    
+    .remove_btn {
+      margin: 0
+    }
+    
+    .product_quantity {
+      margin: .5em 0 .5em 0
+    }
+  }

@@ -8,12 +8,8 @@
     <title>時尚女孩</title>
     <!-- AOS -->
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-    <!-- slick CDN -->
-    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
-    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
-    <!-- bootstrap CDN -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
-        integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <!-- ajax CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
 
     <link rel="stylesheet" href="./style.css">
 </head>
@@ -58,7 +54,7 @@
                                 </li>
                             </ul>
                         </div>
-          
+
                     </li>
                     <li>
                         <a href="./contact.html" data-st-target="list" data-st-duration="1000"
@@ -87,7 +83,7 @@
             </div>
 
             <div id="link_work_two" href="">
-                    配件樣式
+                配件樣式
                 <ul class="sub_link_two">
                     <li>
                         <a href="./accessories.html">飾品</a>
@@ -100,51 +96,82 @@
             <a href="./contact.html" data-st-target="list" data-st-duration="1000" data-st-offset="100">聯絡我們</a>
         </div>
         <div id="social">
-            <a href="https://www.youtube.com/results?search_query=fashion+shop" target="blank"><img src="./img/youtube.png"
-                    alt="youtube"></a>
-            <a href="https://www.instagram.com/besscomha" target="blank"><img src="./img/instagram.png" alt="instagram"></a>
-            <a href="http://m.facebook.com/yanjun.liao.50?ref=bookmarks" target="blank"><img src="./img/facebook.png" alt="facebook"></a>
+            <a href="https://www.youtube.com/results?search_query=fashion+shop" target="blank"><img
+                    src="./img/youtube.png" alt="youtube"></a>
+            <a href="https://www.instagram.com/besscomha" target="blank"><img src="./img/instagram.png"
+                    alt="instagram"></a>
+            <a href="http://m.facebook.com/yanjun.liao.50?ref=bookmarks" target="blank"><img src="./img/facebook.png"
+                    alt="facebook"></a>
             <a href="https://github.com/" target="blank"><img src="./img/github.png" alt="github"></a>
         </div>
     </nav>
 
-    <!-- section#about>.big_box>h2+p-->
-    <section id="about" data-aos="fade" data-aos-duration="3000">
-        <div class="big_box">
-            <p>summer shock</p>
+    <!-- 產品 -->
+    <!--  cart modal  -->
+    <div class="cart_modal_overlay">
+        <div class="cart_modal">
+            <i id="close_btn" class="fas fa-times"></i>
+            <h1 class="cart_is_empty">Cart is empty</h1>
 
-            <div class="mini_max_box">
-                <div class="mini_box">
-                    <div class="mini_card">
-                        <a href="./clothes_skirt.html" target="_blank">
-                            <img src="./img/skirt_one.jpg" alt="服裝">
-                        </a>
-                        <h3>環境融合</h3>
-                    </div>
-                </div>
-
-                <div class="mini_box">
-                    <div class="mini_card">
-                        <a href="./clothes_skirt.html" target="_blank">
-                            <img src="./img/skirt_two.jpg" alt="服裝">
-                        </a>
-                        <h3>輕鬆休閒</h3>
-                    </div>
-                </div>
-
-                <div class="mini_box">
-                    <div class="mini_card">
-                        <a href="./clothes_skirt.html" target="_blank">
-                            <img src="./img/skirt_three.jpg" alt="服裝">
-                        </a>
-                        <h3>制服風格</h3>
-                    </div>
-                </div>
-
+            <div class="product_rows">
             </div>
-
+            <div class="total">
+                <h1 class="cart_total">TOTAL</h1>
+                
+                <span class="total_price">$0</span>
+                <button class="purchase_btn">PURCHASE</button>
+            </div>
         </div>
-    </section>
+    </div>
+    <!--   end of cart modal -->
+    <div class="cart_btn">
+        <i id="cart" class="fas fa-shopping-cart"></i>
+        <span class="cart_quantity">0</span>
+    </div>
+    <!--  products  -->
+    <div class="items_container">
+        <div class="card-1 card">
+            <img class="product_image"
+                src="./img/accessories_four.jpg"
+                alt="">
+            <button class="add_to_cart">Add to cart</button>
+            <h3 class="product_name">necklace(amber red)</h3>
+            <span class="product_price">$350</span>
+        </div>
+        <div class="card-2 card">
+            <img class="product_image"
+                src="./img/accessories_seven.jpg"
+                alt="">
+            <button class="add_to_cart">Add to cart</button>
+            <h3 class="product_name">necklace(gold)</h3>
+            <span class="product_price">$350</span>
+        </div>
+        <div class="card-3 card">
+            <img class="product_image"
+                src="./img/accessories_eight.jpg"
+                alt="">
+            <button class="add_to_cart">Add to cart</button>
+            <h3 class="product_name">necklace(silver)</h3>
+            <span class="product_price">$350</span>
+        </div>
+        <div class="card-4 card">
+            <img class="product_image"
+                src="./img/accessories_five.jpg"
+                alt="">
+            <button class="add_to_cart">Add to cart</button>
+            <h3 class="product_name">earrings(gold)</h3>
+            <span class="product_price">$200</span>
+        </div>
+        <div class="card-5 card">
+            <img class="product_image"
+                src="./img/accessories_six.jpg"
+                alt="">
+            <button class="add_to_cart">Add to cart</button>
+            <h3 class="product_name">jewelry(special pattern)</h3>
+            <span class="product_price">$450</span>
+        </div>
+    </div>
+    <!--  end of products  -->
 
     <!-- 頁尾 -->
     <footer>
@@ -166,13 +193,9 @@
         AOS.init();
     </script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <!-- slick CDN -->
-    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-    <!-- bootstrap CDN -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
-        crossorigin="anonymous"></script>
-    <script src="./js/main.js"></script>
+
+    <script src="./js/cart.js"></script>
+
 </body>
 
 </html>
