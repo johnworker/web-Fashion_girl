@@ -1542,6 +1542,8 @@ footer #copy {
   margin-bottom: 1em;
   width: 350px;
   height: 500px;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .add_to_cart {
