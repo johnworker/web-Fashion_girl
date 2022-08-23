@@ -144,3 +144,42 @@ function purchaseBtnClicked () {
 //alert user if cart is empty 
 
 
+
+// 捲動效果
+$(function () {
+  //捲動至top0的位置
+  $("#arrow").click(function () {
+      $("html,body").animate({
+          scrollTop: 0
+      }, 1000);
+  });
+});
+
+
+// 使用者滑鼠滾動時 停止所有動畫
+$("html").on("mousewheel", function () {
+  $("html").stop();
+});
+
+var arrow = $("#arrow")
+arrow.fadeOut();
+
+// 箭頭顯示與隱藏效果
+$(window).scroll(function () {
+  var windowTop = $(this).scrollTop();
+  // console.log("視窗的上方:" + windowTop)
+
+  var arrowTop = arrow.attr("data-st-top");
+  var arrowTime = arrow.attr("data-st-time");
+  var arrowTimeInt = parseInt(arrowTime); //將時間轉為數字(整數)
+
+  //console.log(arrowTop)
+  //console.log(arrowTime)
+
+
+  //如果 視窗位置 大於等於 箭頭上方 就 淡入
+  if (windowTop >= arrowTop) arrow.stop().fadeIn(arrowTimeInt);
+  //否則就淡出
+  else arrow.stop().fadeOut(arrowTimeInt)
+});
+
