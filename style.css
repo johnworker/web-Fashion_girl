@@ -514,12 +514,12 @@ nav #social a img {
 }
 @media screen and (max-width: 960px) {
   #about .big_box {
-    height: 100vh;
+    height: 280vh;
   }
 }
 @media screen and (max-width: 767px) {
   #about .big_box {
-    height: 100vh;
+    height: 265vh;
   }
 }
 #about .big_box .mini_max_box {
@@ -611,7 +611,14 @@ nav #social a img {
   #news {
     width: 100%;
     padding: 20px 20px;
-    margin: 1600px 0 0;
+    margin: 50px 0 0;
+  }
+}
+@media screen and (max-width: 767px) {
+  #news {
+    width: 100%;
+    padding: 20px 20px;
+    margin: 0;
   }
 }
 
@@ -896,7 +903,7 @@ footer #copy {
 }
 @media screen and (max-width: 767px) {
   #new_products .bigger_box {
-    height: 900vh;
+    height: 910vh;
   }
 }
 #new_products .bigger_box .mini_max_box {
@@ -934,6 +941,11 @@ footer #copy {
   -o-object-fit: cover;
      object-fit: cover;
   transition: 0.4s;
+}
+@media screen and (max-width: 767px) {
+  #new_products .bigger_box .mini_max_box .mini_box .mini_card a img {
+    width: 400px;
+  }
 }
 #new_products .bigger_box .mini_max_box .mini_box .mini_card a img:hover {
   transform: scale(1.05);

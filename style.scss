@@ -461,11 +461,11 @@ nav {
         }
 
         @media screen and (max-width: $tablets) {
-            height: 100vh;
+            height: 280vh;
         }
 
         @media screen and (max-width: $mobile) {
-            height: 100vh;
+            height: 265vh;
         }
 
         .mini_max_box {
@@ -560,8 +560,15 @@ nav {
     @media screen and (max-width: $tablet) {
         width: 100%;
         padding: 20px 20px;
-        margin: 1600px 0 0;
-}
+        margin: 50px 0 0;
+        }
+
+        @media screen and (max-width: $mobile) {
+            width: 100%;
+            padding: 20px 20px;
+            margin: 0;
+            }
+    
     }
 
     #news-content {
@@ -844,7 +851,7 @@ footer {
         }
 
         @media screen and (max-width: $mobile) {
-            height: 900vh;
+            height: 910vh;
         }
 
         .mini_max_box {
@@ -879,6 +886,11 @@ footer {
                             height: 750px;
                             object-fit: cover;
                             transition: 0.4s;
+
+                            @media screen and (max-width: $mobile) {
+                                width: 400px;
+                                }
+                    
 
                             &:hover {
                                 transform: scale(1.05);
