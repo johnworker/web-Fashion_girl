@@ -768,7 +768,7 @@ footer #copy {
 }
 
 #choose {
-  background-image: url(./img/about_bg.jpg);
+  background-image: url(./img/show_bg.jpg);
   background-size: cover;
   background-attachment: fixed;
   margin: 0 auto;
@@ -876,7 +876,7 @@ footer #copy {
 }
 
 #new_products {
-  background-image: url(./img/about_bg.jpg);
+  background-image: url(./img/clothe_bg.jpg);
   background-size: cover;
   background-attachment: fixed;
   margin: 0 auto;
