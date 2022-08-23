@@ -553,6 +553,13 @@ nav #social a img {
      object-fit: cover;
   transition: 0.4s;
 }
+@media screen and (max-width: 767px) {
+  #about .big_box .mini_max_box .mini_box .mini_card a img {
+    width: 400px;
+    height: 650px;
+    margin-top: 20px;
+  }
+}
 #about .big_box .mini_max_box .mini_box .mini_card a img:hover {
   transform: scale(1.05);
 }
@@ -643,6 +650,12 @@ nav #social a img {
   height: 800px;
   -o-object-fit: cover;
      object-fit: cover;
+}
+@media screen and (max-width: 767px) {
+  #news-content img {
+    width: 375px;
+    height: 600px;
+  }
 }
 #news-content a:hover {
   text-decoration: none;

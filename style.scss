@@ -497,6 +497,12 @@ nav {
                             object-fit: cover;
                             transition: 0.4s;
 
+                            @media screen and (max-width: $mobile) {
+                                width: 400px;
+                                height: 650px;
+                                margin-top: 20px;
+                            }                        
+
                             &:hover {
                                 transform: scale(1.05);
                             }
@@ -593,6 +599,11 @@ nav {
             width: 500px;
             height: 800px;
             object-fit: cover;
+
+            @media screen and (max-width: $mobile) {
+                width: 375px;
+                height: 600px;
+            }                        
         }
 
         a {
