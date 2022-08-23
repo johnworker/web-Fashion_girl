@@ -32,6 +32,7 @@
     grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
     margin-top: 1em;
   }
+
   
   .product_name {
     font-size: 24px;
@@ -195,22 +196,3 @@
     transform: translateY(5px);
   }
   
-  @media (max-width: 1000px){
-    .cart-modal {
-      width: 100vw;
-    } 
-    
-    .product-row {
-      flex-direction: column;
-      text-align: center;
-      margin-bottom: 2em;
-    }
-    
-    .remove_btn {
-      margin: 0
-    }
-    
-    .product_quantity {
-      margin: .5em 0 .5em 0
-    }
-  }
